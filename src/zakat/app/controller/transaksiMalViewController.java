@@ -13,15 +13,9 @@ import java.sql.Statement;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
-import javafx.scene.control.RadioButton;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
-import javafx.scene.control.ToggleGroup;
-import zakat.app.model.transaksiFitrah;
 import zakat.app.util.DatabaseConnection;
 
 /**
@@ -29,8 +23,8 @@ import zakat.app.util.DatabaseConnection;
  *
  * @author dimas
  */
-public class transaksiFitrahViewController implements Initializable {
-
+public class transaksiMalViewController implements Initializable {
+    
     @FXML
     private TextField namaTextField;
     @FXML
@@ -38,62 +32,47 @@ public class transaksiFitrahViewController implements Initializable {
     @FXML
     private TextField penghasilanTextField;
     @FXML
-    private RadioButton berasRadioButton;
-    @FXML
-    private RadioButton uangRadioButton;
-    @FXML
     private DatePicker dateDatePicker;
     @FXML
     private Label messageLabel;
-
+    @FXML
+    private TextField totalBayarTextField;
+    
     DatabaseConnection connectNow = new DatabaseConnection();
     Connection connectDB = connectNow.getConnection();
-
+    
+    @FXML
     public void bayarButtonOnClick() {
         Date sqlDate = Date.valueOf(dateDatePicker.getValue());
-
-        if (berasRadioButton.isSelected()) {
-            String query = "INSERT INTO transaksifitrah VALUES (NULL, '" + idTextField.getText() + "','" + namaTextField.getText() + "','" + "Beras" + "','" + sqlDate + "','" + "" + "','" + "3,5 Liter" + "')";
-
-            try {
-                Statement st = connectDB.createStatement();
-                st.executeUpdate(query);
-
-                messageLabel.setText("Pembayaran berhasil.");
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
-        } else if (uangRadioButton.isSelected()) {
-            String query = "INSERT INTO transaksifitrah VALUES (NULL, '" + idTextField.getText() + "','" + namaTextField.getText() + "','" + "Uang" + "','" + sqlDate + "','" + "" + "','" + "NULL" + "')";
-
-            try {
-                Statement st = connectDB.createStatement();
-                st.executeUpdate(query);
-
-                messageLabel.setText("Pembayaran berhasil.");
-            } catch (SQLException e) {
-                e.printStackTrace();
-                messageLabel.setText("Gagal!");
-                System.out.println(e);
-            }
+        String query = "INSERT INTO transaksimaal VALUES (NULL, '" + idTextField.getText() + "','" + namaTextField.getText() + "','" + penghasilanTextField.getText() + "','" + sqlDate + "','" + totalBayarTextField.getText() + "')";
+        
+        try {
+            Statement st = connectDB.createStatement();
+            st.executeUpdate(query);
+            
+            messageLabel.setText("Pembayaran berhasil.");
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
         }
-
+        
     }
-
+    
     @FXML
     public void checkButtonOnClick() {
         String nama = namaTextField.getText();
         String query = "SELECT id_muzakki, penghasilan FROM muzakki WHERE namamuzakki = '" + nama + "'";
-
+        
         try {
             Statement st = connectDB.createStatement();
             ResultSet rs = st.executeQuery(query);
             while (rs.next()) {
                 String id = rs.getString("id_muzakki");
                 String penghasilan = rs.getString("penghasilan");
-
+                int totalBayar = (int) (Integer.parseInt(rs.getString("penghasilan")) * 0.025);
+                
                 idTextField.setText(id);
                 penghasilanTextField.setText(penghasilan);
+                totalBayarTextField.setText(Integer.toString(totalBayar));
             }
         } catch (SQLException e) {
             messageLabel.setText("Data tidak ada.");
@@ -105,5 +84,5 @@ public class transaksiFitrahViewController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }
-
+    
 }

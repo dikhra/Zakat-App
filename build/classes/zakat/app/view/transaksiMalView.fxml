@@ -3,15 +3,13 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="880.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="zakat.app.controller.transaksiFitrahViewController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="880.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="zakat.app.controller.transaksiMalViewController">
    <children>
-      <Label layoutX="213.0" layoutY="32.0" text="Transaksi Zakat Fitrah">
+      <Label layoutX="238.0" layoutY="34.0" text="Transaksi Zakat Mal">
          <font>
             <Font name="Verdana Bold" size="36.0" />
          </font>
@@ -22,6 +20,11 @@
          </font>
       </Label>
       <TextField fx:id="namaTextField" layoutX="310.0" layoutY="138.0" prefHeight="25.0" prefWidth="355.0" />
+      <Button fx:id="checkButton" layoutX="694.0" layoutY="135.0" mnemonicParsing="false" onAction="#checkButtonOnClick" style="-fx-background-color: #225230;" text="Periksa Nama" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
       <Label layoutX="113.0" layoutY="191.0" text="ID Muzakki">
          <font>
             <Font name="Verdana" size="14.0" />
@@ -39,21 +42,17 @@
          </font>
       </Label>
       <TextField fx:id="penghasilanTextField" editable="false" layoutX="340.0" layoutY="233.0" prefHeight="25.0" prefWidth="324.0" />
-      <Label layoutX="114.0" layoutY="281.0" text="Jenis Pembayaran">
+      <Label layoutX="113.0" layoutY="278.0" text="Zakat dikeluarkan">
          <font>
             <Font name="Verdana" size="14.0" />
          </font>
       </Label>
-      <RadioButton fx:id="berasRadioButton" layoutX="310.0" layoutY="282.0" mnemonicParsing="false" selected="true" text="Beras 3,5L/2,5Kg">
-         <toggleGroup>
-            <ToggleGroup fx:id="jenisPembayaran" />
-         </toggleGroup></RadioButton>
-      <RadioButton fx:id="uangRadioButton" layoutX="465.0" layoutY="282.0" mnemonicParsing="false" text="Uang Rp 45.000" toggleGroup="$jenisPembayaran" />
-      <Button fx:id="checkButton" layoutX="694.0" layoutY="135.0" mnemonicParsing="false" onAction="#checkButtonOnClick" style="-fx-background-color: #225230;" text="Periksa Nama" textFill="WHITE">
+      <Label layoutX="310.0" layoutY="278.0" text="Rp.">
          <font>
-            <Font size="14.0" />
+            <Font name="Verdana" size="14.0" />
          </font>
-      </Button>
+      </Label>
+      <TextField fx:id="totalBayarTextField" editable="false" layoutX="340.0" layoutY="275.0" prefHeight="25.0" prefWidth="324.0" />
       <Label layoutX="114.0" layoutY="329.0" text="Tanggal">
          <font>
             <Font name="Verdana" size="14.0" />

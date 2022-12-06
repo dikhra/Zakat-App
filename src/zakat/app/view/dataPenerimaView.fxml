@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="880.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="zakat.app.controller.transaksiMalViewController">
+   <children>
+      <Label layoutX="228.0" layoutY="34.0" text="Data Penerima Zakat">
+         <font>
+            <Font name="Verdana Bold" size="36.0" />
+         </font>
+      </Label>
+      <TableView layoutX="6.0" layoutY="103.0" prefHeight="610.0" prefWidth="869.0">
+        <columns>
+          <TableColumn prefWidth="50.0" text="ID" />
+          <TableColumn prefWidth="185.0" text="Nama" />
+            <TableColumn minWidth="0.0" prefWidth="195.0" text="Alamat" />
+            <TableColumn prefWidth="42.0" text="RT" />
+            <TableColumn prefWidth="45.0" text="RW" />
+            <TableColumn prefWidth="153.0" text="Nomor Telepon" />
+            <TableColumn prefWidth="198.0" text="Penghasilan" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

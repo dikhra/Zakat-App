@@ -87,6 +87,7 @@ public class LoginViewController implements Initializable {
                     loginMessageLabel.setText("Username atau password salah.");
                 }
             }
+            
 
         } catch (SQLException e) {
         }

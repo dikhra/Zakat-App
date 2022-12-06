@@ -68,7 +68,16 @@ public class MenuViewController implements Initializable {
     private void page5(MouseEvent event) {
         loadPage("daftarMuzakkiView");
     }
+    
+        @FXML
+    private void page6(MouseEvent event) {
+        loadPage("transaksiFitrahView");
+    }
 
+    @FXML
+    private void page7(MouseEvent event) {
+        loadPage("transaksiMalView");
+    }
     
     @FXML
     private void keluarAkun(MouseEvent event) throws IOException {
@@ -91,14 +100,6 @@ public class MenuViewController implements Initializable {
         bp.setCenter(root);
     }
 
-    @FXML
-    private void page6(MouseEvent event) {
-        loadPage("transaksiFitrahView");
-    }
 
-    @FXML
-    private void page7(MouseEvent event) {
-        
-    }
 
 }
