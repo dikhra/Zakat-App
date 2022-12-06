@@ -10,7 +10,7 @@ import java.sql.Date;
  *
  * @author dimas
  */
-public class transaksiFitrah {
+public class TransaksiFitrah {
 
     private int idTransaksi;
     private int idMuzakki;
@@ -20,7 +20,7 @@ public class transaksiFitrah {
     private int totalBayar;
     private int totalBeras;
 
-    public transaksiFitrah(int idTransaksi, int idMuzakki, String jenisPembayaran, String nama, Date tanggal, int totalbayar, int totalberas) {
+    public TransaksiFitrah(int idTransaksi, int idMuzakki, String jenisPembayaran, String nama, Date tanggal, int totalbayar, int totalberas) {
         this.idTransaksi = idTransaksi;
         this.idMuzakki = idMuzakki;
         this.jenisPembayaran = jenisPembayaran;

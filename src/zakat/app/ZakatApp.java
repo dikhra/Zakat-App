@@ -16,11 +16,11 @@ import javafx.stage.StageStyle;
  * @author dimas
  */
 public class ZakatApp extends Application {
-    
+
     @Override
     public void start(Stage primaryStage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("/zakat/app/view/LoginView.fxml"));
-        
+
         Scene scene = new Scene(root);
         primaryStage.initStyle(StageStyle.UNDECORATED);
         primaryStage.setScene(scene);
@@ -33,5 +33,4 @@ public class ZakatApp extends Application {
     public static void main(String[] args) {
         launch(args);
     }
-    
 }

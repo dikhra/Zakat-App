@@ -25,23 +25,16 @@ import zakat.app.util.DatabaseConnection;
  */
 public class transaksiMalViewController implements Initializable {
     
-    @FXML
     private TextField namaTextField;
-    @FXML
     private TextField idTextField;
-    @FXML
     private TextField penghasilanTextField;
-    @FXML
     private DatePicker dateDatePicker;
-    @FXML
     private Label messageLabel;
-    @FXML
     private TextField totalBayarTextField;
     
     DatabaseConnection connectNow = new DatabaseConnection();
     Connection connectDB = connectNow.getConnection();
     
-    @FXML
     public void bayarButtonOnClick() {
         Date sqlDate = Date.valueOf(dateDatePicker.getValue());
         String query = "INSERT INTO transaksimaal VALUES (NULL, '" + idTextField.getText() + "','" + namaTextField.getText() + "','" + penghasilanTextField.getText() + "','" + sqlDate + "','" + totalBayarTextField.getText() + "')";
@@ -57,7 +50,6 @@ public class transaksiMalViewController implements Initializable {
         
     }
     
-    @FXML
     public void checkButtonOnClick() {
         String nama = namaTextField.getText();
         String query = "SELECT id_muzakki, penghasilan FROM muzakki WHERE namamuzakki = '" + nama + "'";

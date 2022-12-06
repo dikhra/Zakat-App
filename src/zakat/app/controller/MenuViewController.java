@@ -68,8 +68,8 @@ public class MenuViewController implements Initializable {
     private void page5(MouseEvent event) {
         loadPage("daftarMuzakkiView");
     }
-    
-        @FXML
+
+    @FXML
     private void page6(MouseEvent event) {
         loadPage("transaksiFitrahView");
     }
@@ -78,7 +78,12 @@ public class MenuViewController implements Initializable {
     private void page7(MouseEvent event) {
         loadPage("transaksiMalView");
     }
-    
+
+    @FXML
+    private void page8(MouseEvent event) {
+        loadPage("dataPenerimaView");
+    }
+
     @FXML
     private void keluarAkun(MouseEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/zakat/app/view/LoginView.fxml"));
@@ -99,7 +104,5 @@ public class MenuViewController implements Initializable {
 
         bp.setCenter(root);
     }
-
-
 
 }
