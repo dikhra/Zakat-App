@@ -31,12 +31,22 @@
                   <Font size="15.0" />
                </font>
             </Button>
-            <Button layoutX="10.0" layoutY="130.0" mnemonicParsing="false" onMouseClicked="#page4" prefHeight="60.0" prefWidth="200.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" styleClass="\\" text="Bayar Zakat Fitrah" textFill="WHITE">
+            <Button layoutX="10.0" layoutY="130.0" mnemonicParsing="false" onMouseClicked="#page4" prefHeight="60.0" prefWidth="200.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" styleClass="\\" text="Daftar Mustahik" textFill="WHITE">
                <font>
                   <Font size="15.0" />
                </font>
             </Button>
-            <Button layoutX="10.0" layoutY="190.0" mnemonicParsing="false" onMouseClicked="#page5" prefHeight="60.0" prefWidth="200.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" styleClass="\\" text="Bayar Zakat Maal" textFill="WHITE">
+            <Button layoutX="10.0" layoutY="190.0" mnemonicParsing="false" onMouseClicked="#page5" prefHeight="60.0" prefWidth="200.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" styleClass="\\" text="Daftar Muzakki" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="10.0" layoutY="250.0" mnemonicParsing="false" onMouseClicked="#page6" prefHeight="60.0" prefWidth="200.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" styleClass="\\" text="Bayar Zakat Fitrah" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="10.0" layoutY="430.0" mnemonicParsing="false" onMouseClicked="#page7" prefHeight="60.0" prefWidth="200.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" styleClass="\\" text="Bayar Zakat Fitrah" textFill="WHITE">
                <font>
                   <Font size="15.0" />
                </font>
