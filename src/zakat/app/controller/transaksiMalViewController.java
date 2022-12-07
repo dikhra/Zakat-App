@@ -24,36 +24,42 @@ import zakat.app.util.DatabaseConnection;
  * @author dimas
  */
 public class transaksiMalViewController implements Initializable {
-    
+
+    @FXML
     private TextField namaTextField;
+    @FXML
     private TextField idTextField;
+    @FXML
     private TextField penghasilanTextField;
+    @FXML
     private DatePicker dateDatePicker;
+    @FXML
     private Label messageLabel;
+    @FXML
     private TextField totalBayarTextField;
-    
+
     DatabaseConnection connectNow = new DatabaseConnection();
     Connection connectDB = connectNow.getConnection();
-    
+
     public void bayarButtonOnClick() {
         Date sqlDate = Date.valueOf(dateDatePicker.getValue());
         String query = "INSERT INTO transaksimaal VALUES (NULL, '" + idTextField.getText() + "','" + namaTextField.getText() + "','" + penghasilanTextField.getText() + "','" + sqlDate + "','" + totalBayarTextField.getText() + "')";
-        
+
         try {
             Statement st = connectDB.createStatement();
             st.executeUpdate(query);
-            
+
             messageLabel.setText("Pembayaran berhasil.");
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
-        
+
     }
-    
+
     public void checkButtonOnClick() {
         String nama = namaTextField.getText();
         String query = "SELECT id_muzakki, penghasilan FROM muzakki WHERE namamuzakki = '" + nama + "'";
-        
+
         try {
             Statement st = connectDB.createStatement();
             ResultSet rs = st.executeQuery(query);
@@ -61,7 +67,7 @@ public class transaksiMalViewController implements Initializable {
                 String id = rs.getString("id_muzakki");
                 String penghasilan = rs.getString("penghasilan");
                 int totalBayar = (int) (Integer.parseInt(rs.getString("penghasilan")) * 0.025);
-                
+
                 idTextField.setText(id);
                 penghasilanTextField.setText(penghasilan);
                 totalBayarTextField.setText(Integer.toString(totalBayar));
@@ -71,10 +77,10 @@ public class transaksiMalViewController implements Initializable {
             System.out.print(e);
         }
     }
-    
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }
-    
+
 }

@@ -85,6 +85,11 @@ public class MenuViewController implements Initializable {
     }
 
     @FXML
+    private void page9(MouseEvent event) {
+        loadPage("dataPembayarView");
+    }
+
+    @FXML
     private void keluarAkun(MouseEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/zakat/app/view/LoginView.fxml"));
 

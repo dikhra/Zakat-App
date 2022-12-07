@@ -56,6 +56,11 @@
                   <Font size="15.0" />
                </font>
             </Button>
+            <Button layoutX="10.0" layoutY="490.0" mnemonicParsing="false" onMouseClicked="#page9" prefHeight="60.0" prefWidth="200.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" styleClass="\\" text="Data Pembayar Zakat" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
             <Button fx:id="logoutButton" layoutX="10.0" layoutY="370.0" mnemonicParsing="false" onMouseClicked="#keluarAkun" prefHeight="60.0" prefWidth="200.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" styleClass="\\" text="Keluar" textFill="WHITE">
                <font>
                   <Font size="15.0" />

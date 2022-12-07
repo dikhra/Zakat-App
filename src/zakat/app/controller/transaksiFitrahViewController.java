@@ -48,7 +48,7 @@ public class transaksiFitrahViewController implements Initializable {
         Date sqlDate = Date.valueOf(dateDatePicker.getValue());
 
         if (berasRadioButton.isSelected()) {
-            String query = "INSERT INTO transaksifitrah VALUES (NULL, '" + idTextField.getText() + "','" + namaTextField.getText() + "','" + "Beras" + "','" + sqlDate + "','" + "" + "','" + "3,5 Liter" + "')";
+            String query = "INSERT INTO transaksifitrah VALUES (NULL, '" + idTextField.getText() + "','" + namaTextField.getText() + "','" + "Beras" + "','" + sqlDate + "'," + "NULL" + ",'" + "3.5" + "')";
 
             try {
                 Statement st = connectDB.createStatement();
@@ -59,7 +59,7 @@ public class transaksiFitrahViewController implements Initializable {
                 e.printStackTrace();
             }
         } else if (uangRadioButton.isSelected()) {
-            String query = "INSERT INTO transaksifitrah VALUES (NULL, '" + idTextField.getText() + "','" + namaTextField.getText() + "','" + "Uang" + "','" + sqlDate + "','" + "" + "','" + "NULL" + "')";
+            String query = "INSERT INTO transaksifitrah VALUES (NULL, '" + idTextField.getText() + "','" + namaTextField.getText() + "','" + "Uang" + "','" + sqlDate + "','" + "45000" + "'," + "NULL" + ")";
 
             try {
                 Statement st = connectDB.createStatement();
