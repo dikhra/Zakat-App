@@ -30,3 +30,5 @@ Sebelum menjalankan ZakatApp, pastikan sistem pengguna telah memenuhi persyarata
 4. **Masukkan Informasi Zakat:** Isi informasi yang diperlukan untuk menghitung zakat berdasarkan pendapatan dan aset Anda.
 
 5. **Jelajahi Informasi Tambahan:** Temukan informasi tambahan tentang jenis zakat, penerima zakat, dan metode pembayaran.
+
+![Login page](src/zakat/app/assets/Login%20page.jpeg)
